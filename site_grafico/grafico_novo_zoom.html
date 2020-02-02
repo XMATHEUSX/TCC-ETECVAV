@@ -1,0 +1,172 @@
+
+<html >
+<meta charset="utf-8"/>
+<head>
+  <title>Mobile ChartRangeFilter</title>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="jQRangeSlider-5.1.1/css/classic-min.css" />
+  <style>#filter_mobile {display:none}</style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" defer async></script>
+
+  <script src="//www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+  var data = [       [5, 0],
+           [4.97, 1],
+           [4.88, 1],
+           [4.8, 1],
+           [4.72, 1],
+           [4.63, 1],
+           [4.55, 1],
+           [4.47, 1],
+           [4.38, 1],
+           [4.3, 1],
+           [4.2, 1],
+           [4.12, 1],
+           [4.03, 1],
+           [3.93, 1],
+           [3.85, 1],
+           [3.77, 1],
+           [3.68, 1],
+           [3.6, 2],
+           [3.52, 2],
+           [3.43, 1],
+           [3.35, 2],
+           [3.25, 2],
+           [3.17, 1],
+           [3.08, 2],
+           [2.98, 2],
+           [2.9, 1],
+           [2.82, 2],
+           [2.73, 2],
+           [2.65, 1],
+           [2.57, 2],
+           [2.48, 2],
+           [2.4, 3],
+           [2.32, 3],
+           [2.22, 3],
+           [2.13, 2],
+           [2.05, 3],
+           [1.95, 3],
+           [1.87, 3],
+           [1.78, 2],
+           [1.7, 3],
+           [1.62, 3],
+           [1.53, 2],
+           [1.45, 2],
+           [1.37, 3],
+           [1.28, 2],
+           [1.18, 3],
+           [1.1, 2],
+           [1.02, 2],
+           [0.92, 3],
+           [0.83, 2],
+           [0.75, 3],
+           [0.67, 2],
+           [0.58, 2],
+           [0.5, 3],
+           [0.42, 2],
+           [0.33, 3],
+           [0.23, 2],
+           [0.15, 1],
+           [0.07, 0],
+           [0.02, 0],
+           [0, 0],
+    ];
+  var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+
+  google.load('visualization', '1.0', {'packages':['corechart', 'controls']});
+  google.setOnLoadCallback(apiLoaded);
+  var controLWrapper;
+  function apiLoaded()
+  {
+   var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn('number', "Moedas Coletadas Por Período de Tempo");
+    dataTable.addColumn('number', "Sessão " +116);
+    dataTable.addRows(data);
+
+    controlWrapper = new google.visualization.ControlWrapper({
+      controlType: 'ChartRangeFilter',
+      containerId: 'filter',
+      options: {
+        filterColumnIndex: 0,
+        height: 75,
+        ui: {
+          chartType: 'LineChart',
+          chartOptions: {
+            chartArea: {
+              width: '50%',
+              height: '35%'
+            },
+            hAxis: {
+              baselineColor: 'none'
+            }
+          },
+          // 1 day in milliseconds = 24 * 60 * 60 * 1000 = 86,400,000
+          minRangeSize: 86400000
+        }
+      }
+    });
+
+    var chartWrapper = new google.visualization.ChartWrapper({
+      chartType: 'LineChart',
+      containerId: 'chart',
+      options: {
+        width: '90%',
+        height: 300,
+        chartArea: {
+          width: '85%'
+        },
+        legend: 'bottom',
+        hAxis: {
+          maxTextLines: 15,
+          minTextSpacing: 100, 
+          title: 'Período de Tempo'
+        },
+        vAxis: {
+          minValue: 2,
+          title: 'Moedas'
+        },
+        animation:{
+          duration: 500,
+          easing: 'out',
+        },
+        title: 'Moedas Coletador Por Período de Tempo'
+      }
+    });
+
+    var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard'));
+    dashboard
+      .bind(controlWrapper, chartWrapper)
+      .draw(dataTable);
+  }
+</script>
+</head>
+<body>
+  <body>
+<div id="dashboard">
+  <div id="chart" ></div>
+  <div id="filter" ></div>
+<div style="width:190px; margin-top:-23%;position:absolute;">
+                 <div style="width:190px; margin-top:0%; position:absolute;">
+                      
+                      <br>
+                      <br>
+                      <b>Data da sessão</b>: 2019-03-20
+                      <br><br>
+                      <b>Duração</b>: 5 Minuto(s)
+                      <br><br>
+                      <b>Pontuação</b>: 107
+                      <br><br>
+                      <b>Jogo</b>: 2
+                </div>
+
+                </div>
+  <!--<div id="filter_title">Date Filter</div>-->
+  
+  <!--<div id="filter_mobile"></div>>-->
+</div>
+</body>
+</html>
+

@@ -7,4 +7,7 @@ Com a integração do Hardware com dois jogos para o tratamento dos pacientes e 
 ## Hardware:
   O Hardware funciona de maneira bem simples: Ele é um pedal ergométrico que ajuda no tratamento fisioterápico de pacientes com os movimentos inferiores debilitados, aplicando força e auxiliando os pacientes a concluir o movimento.
 
-![](PedalBanner.gif)
+![]()
+<p align="center">
+  <img src="PedalBanner.gif">
+</p>

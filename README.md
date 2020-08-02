@@ -20,5 +20,5 @@ Com a integração do Hardware com dois jogos para o tratamento dos pacientes e 
   
   ![]()
 <p align="center">
-  <img src="medico.gif">
+  <img src="Medico.gif">
 </p>

@@ -14,10 +14,15 @@ Com a integração do Hardware com dois jogos para o tratamento dos pacientes e 
 
 # Ultilização
 
-  * Criar bd localhost Chamado clinica
-  
-  * Execultar script BD dentro do banco de dados clinica 
-  
+
+## Área RH
+  ![]()
+<p align="center">
+  <img src="RH.gif">
+</p>
+
+
+## Área médico
   ![]()
 <p align="center">
   <img src="Medico.gif">

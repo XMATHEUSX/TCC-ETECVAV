@@ -17,3 +17,8 @@ Com a integração do Hardware com dois jogos para o tratamento dos pacientes e 
   * Criar bd localhost Chamado clinica
   
   * Execultar script BD dentro do banco de dados clinica 
+  
+  ![]()
+<p align="center">
+  <img src="medico.gif">
+</p>

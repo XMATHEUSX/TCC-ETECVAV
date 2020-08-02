@@ -1,4 +1,4 @@
-# Site para apresentação dos dados obtidos atraves dos jogos e para registro de paciente e mdicos 
+# Site para apresentação dos dados obtidos atraves dos jogos e para registro de paciente e médicos 
 
 ## Resumo: 
 Um pedal ergométrico com fins fisioterápicos para o uso de pacientes com os movimentos debilitados da parte inferior. 

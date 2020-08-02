@@ -11,3 +11,9 @@ Com a integração do Hardware com dois jogos para o tratamento dos pacientes e 
 <p align="center">
   <img src="PedalBanner.gif">
 </p>
+
+# Ultilização
+
+  * Criar bd localhost Chamado clinica
+  
+  * Execultar script BD dentro do banco de dados clinica 
